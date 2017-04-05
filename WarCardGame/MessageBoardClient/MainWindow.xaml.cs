@@ -25,7 +25,7 @@ using System.Windows.Shapes;
 using WarCardGameLibrary;
 using System.ServiceModel;
 //using MessageBoardClient.MessageBoardServiceRef;
-using MessageBoardClient.ServiceReference1;
+//using MessageBoardClient.ServiceReference1;
 
 namespace WarCardGameClient
 {
@@ -34,7 +34,7 @@ namespace WarCardGameClient
     /// </summary>
     ///
     [CallbackBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant, UseSynchronizationContext = false)]
-    public partial class MainWindow : Window, MessageBoardClient.ServiceReference1.IUserCallback
+    public partial class MainWindow : Window, IUserCallback
     {
         private Deck deck = new Deck();
         private UserClient gameBrd = null;

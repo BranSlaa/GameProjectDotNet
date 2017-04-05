@@ -46,6 +46,7 @@ namespace WarCardGame
 					string winner = gameBrd.addCard(name, card);
 					if (winner != "")
 						gameBrd.PostMessage(winner);
+					lbPlayedCards.Items.Add(winner);
 					
 				}
 				catch (Exception ex)
@@ -70,11 +71,11 @@ namespace WarCardGame
 			{
 				gameBrd = new UserClient(new InstanceContext(this));
 
-				if (gameBrd.Join(textAlias.Text))
+				if (gameBrd.Join(tbPlayerName.Text))
 				{
 					// Alias accepted by the service so update GUI
-					listMessages.ItemsSource = gameBrd.GetAllMessages();
-					textAlias.IsEnabled = buttonSet.IsEnabled = false;
+					lbPlayedCards.ItemsSource = gameBrd.GetAllMessages();
+					tbPlayerName.IsEnabled = btnSetName.IsEnabled = false;
 				}
 				else
 				{
@@ -97,7 +98,7 @@ namespace WarCardGame
 			{
 				try
 				{
-					listMessages.ItemsSource = messages;
+					lbPlayedCards.ItemsSource = messages;
 				}
 				catch (Exception ex)
 				{
@@ -108,6 +109,24 @@ namespace WarCardGame
 				this.Dispatcher.BeginInvoke(new GuiUpdateDelegate(SendAllMessages), new object[] { messages });
 		}
 
+		private void btnSetName_Click(object sender, RoutedEventArgs e)
+		{
+			try
+			{
 
+				if (tbPlayerName.Text != "")
+				{
+					name = tbPlayerName.Text;
+					btnSetName.IsEnabled = tbPlayerName.IsEnabled = false;
+					btnPlayNextCard.IsEnabled = lbPlayedCards.IsEnabled = true;
+
+					connectToMessageBoard();
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+		}
 	}
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,9 +20,11 @@ namespace WarCardGame
 	/// <summary>
 	/// Interaction logic for LogonWindow.xaml
 	/// </summary>
-	public partial class LogonWindow : Window
+	[CallbackBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant, UseSynchronizationContext = false)]
+	public partial class LogonWindow : Window, WarCardGame.ServiceReference1.IUserCallback
 	{
-		private string name = "";
+		private UserClient gameBrd = null;
+		
 		public LogonWindow()
 		{
 			InitializeComponent();
@@ -40,9 +43,32 @@ namespace WarCardGame
 				return;
 			}
 			tbName.BorderBrush = new SolidColorBrush(Colors.Black);
-			MainWindow main = new MainWindow();
-			main.Show();
-			this.Close();
+
+			connectToMessageBoard();
+		}
+
+		private void connectToMessageBoard()
+		{
+			try
+			{
+				gameBrd = new UserClient(new InstanceContext(this));
+
+				gameBrd.Join(tbName.Text);
+
+				MainWindow main = new MainWindow();
+				main.Show();
+				this.Close();
+
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+		}
+
+		public void SendAllMessages(string[] messages)
+		{
+			
 		}
 	}
 }

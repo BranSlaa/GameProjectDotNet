@@ -12,16 +12,17 @@
 			<RowDefinition Height="Auto" />
 			<RowDefinition Height="*" />
 		</Grid.RowDefinitions>
-		<StackPanel Orientation="Horizontal" Grid.Row="0">
-			<Label Content="Player Name:" Margin="10" />
-			<Label x:Name="lblPlayerName" Content="" Width="100" Margin="10" />
-		</StackPanel>
-		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1">
-			<Button x:Name="btnPlayNextCard" Content="Play Card" Width="100" Margin="10" Click="btnPlayNextCard_Click"/>
-			<Button x:Name="btnViewScores" Content="View Scores" Width="100" Margin="10" Click="btnViewScores_Click"/>
-		</StackPanel>
+		<DockPanel LastChildFill="True" Grid.Row="0">
+			<Label Content="Player Name:" Margin="10" DockPanel.Dock="Left"/>
+			<Button x:Name="btnSetName" Content="Confirm Name" Margin="10" Padding="5" DockPanel.Dock="Right" Click="btnSetName_Click"/>
+			<TextBox x:Name="tbPlayerName" Margin="10"/>
+		</DockPanel>
+		<DockPanel LastChildFill="True" Grid.Row="1">
+			<Button x:Name="btnViewScores" Content="View Scores" Margin="10" Padding="5" Click="btnViewScores_Click" DockPanel.Dock="Right"/>
+			<Button x:Name="btnPlayNextCard" Content="Play Card" Margin="10" Padding="5" Click="btnPlayNextCard_Click"/>
+		</DockPanel>
 		<GroupBox Header="Play Area" x:Name="gbPlayArea" Grid.Row="2">
-			<TextBlock x:Name="tbPlayedCards" />
+			<ListBox x:Name="lbPlayedCards" IsEnabled="False" DataContext="{Binding}"/>
 		</GroupBox>
 	</Grid>
 </Window>

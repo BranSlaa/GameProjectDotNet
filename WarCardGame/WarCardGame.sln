@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarCardGameService", "Messa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarCardGameLibrary", "MessageBoardLibrary\WarCardGameLibrary.csproj", "{4D25E43E-DCB8-4023-BC59-EBBC7F77B852}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarCardGameClient", "MessageBoardClient\WarCardGameClient.csproj", "{BCEB5662-9EE6-44AD-B19B-9D8DC73A84DE}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{4D25E43E-DCB8-4023-BC59-EBBC7F77B852}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D25E43E-DCB8-4023-BC59-EBBC7F77B852}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D25E43E-DCB8-4023-BC59-EBBC7F77B852}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BCEB5662-9EE6-44AD-B19B-9D8DC73A84DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BCEB5662-9EE6-44AD-B19B-9D8DC73A84DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BCEB5662-9EE6-44AD-B19B-9D8DC73A84DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BCEB5662-9EE6-44AD-B19B-9D8DC73A84DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
