@@ -46,7 +46,6 @@ namespace WarCardGame
 					string winner = gameBrd.addCard(name, card);
 					if (winner != "")
 						gameBrd.PostMessage(winner);
-					lbPlayedCards.Items.Add(winner);
 					
 				}
 				catch (Exception ex)
