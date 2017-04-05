@@ -45,6 +45,12 @@
   <wsdl:message name="IUser_PostMessage_InputMessage">
     <wsdl:part name="parameters" element="tns:PostMessage" />
   </wsdl:message>
+  <wsdl:message name="IUser_getScores_InputMessage">
+    <wsdl:part name="parameters" element="tns:getScores" />
+  </wsdl:message>
+  <wsdl:message name="IUser_getScores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getScoresResponse" />
+  </wsdl:message>
   <wsdl:message name="IUser_GetAllMessages_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllMessages" />
   </wsdl:message>
@@ -72,6 +78,10 @@
     </wsdl:operation>
     <wsdl:operation name="PostMessage">
       <wsdl:input wsaw:Action="http://tempuri.org/IUser/PostMessage" message="tns:IUser_PostMessage_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getScores">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/getScores" message="tns:IUser_getScores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/getScoresResponse" message="tns:IUser_getScores_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAllMessages">
       <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetAllMessages" message="tns:IUser_GetAllMessages_InputMessage" />
@@ -122,6 +132,15 @@
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getScores">
+      <soap12:operation soapAction="http://tempuri.org/IUser/getScores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAllMessages">
       <soap12:operation soapAction="http://tempuri.org/IUser/GetAllMessages" style="document" />

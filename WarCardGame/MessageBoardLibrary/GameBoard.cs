@@ -40,6 +40,8 @@ namespace WarCardGameLibrary
         [OperationContract(IsOneWay = true)]
         void PostMessage(string message);
         [OperationContract]
+        Dictionary<string, int> getScores();
+        [OperationContract]
         string[] GetAllMessages();
     }
 
@@ -159,6 +161,11 @@ namespace WarCardGameLibrary
                 }
             }
             return canBePlayed;
+        }
+
+        public Dictionary<string, int> getScores()
+        {
+            return playerPoints;
         }
     }
 }

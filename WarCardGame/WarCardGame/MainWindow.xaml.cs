@@ -61,7 +61,7 @@ namespace WarCardGame
 
 		private void btnViewScores_Click(object sender, RoutedEventArgs e)
 		{
-
+            Dictionary<string, int> scores = gameBrd.getScores();
 		}
 
 		private void connectToMessageBoard()

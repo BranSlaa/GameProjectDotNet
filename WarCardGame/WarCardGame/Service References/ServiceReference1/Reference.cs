@@ -45,6 +45,12 @@ namespace WarCardGame.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IUser/PostMessage")]
         System.Threading.Tasks.Task PostMessageAsync(string message);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUser/getScores", ReplyAction="http://tempuri.org/IUser/getScoresResponse")]
+        System.Collections.Generic.Dictionary<string, int> getScores();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUser/getScores", ReplyAction="http://tempuri.org/IUser/getScoresResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<string, int>> getScoresAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUser/GetAllMessages", ReplyAction="http://tempuri.org/IUser/GetAllMessagesResponse")]
         string[] GetAllMessages();
         
@@ -125,6 +131,14 @@ namespace WarCardGame.ServiceReference1 {
         
         public System.Threading.Tasks.Task PostMessageAsync(string message) {
             return base.Channel.PostMessageAsync(message);
+        }
+        
+        public System.Collections.Generic.Dictionary<string, int> getScores() {
+            return base.Channel.getScores();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<string, int>> getScoresAsync() {
+            return base.Channel.getScoresAsync();
         }
         
         public string[] GetAllMessages() {
