@@ -19,9 +19,16 @@ namespace WarCardGame
 	/// </summary>
 	public partial class ScoreWindow : Window
 	{
-		public ScoreWindow()
+		public ScoreWindow(Dictionary<string, int> scores)
 		{
 			InitializeComponent();
+
+			foreach (var score in scores)
+			{
+				lvScore.Items.Add(score);
+			}
+
+			this.DataContext = this;
 		}
 	}
 }

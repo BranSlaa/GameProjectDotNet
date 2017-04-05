@@ -53,15 +53,13 @@ namespace WarCardGame
 					MessageBox.Show(ex.Message);
 				}
 			}
-			else
-			{
-				gameBrd.PostMessage("You have already played a card");
-			}
 		}
 
 		private void btnViewScores_Click(object sender, RoutedEventArgs e)
 		{
             Dictionary<string, int> scores = gameBrd.getScores();
+			ScoreWindow scorewin = new ScoreWindow(scores);
+			scorewin.Show();
 		}
 
 		private void connectToMessageBoard()
