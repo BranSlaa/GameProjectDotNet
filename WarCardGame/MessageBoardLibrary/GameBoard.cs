@@ -135,7 +135,7 @@ namespace WarCardGameLibrary
                 //do a foreach and increase the winners score
                 foreach(KeyValuePair<string, int> kvp in playerPoints)
                 {
-                    if(kvp.Key == name)
+                    if(kvp.Key == tempWinner.Key)
                     {
                         playerPoints[kvp.Key] = kvp.Value + 1;
                         amountOfPoints = playerPoints[kvp.Key].ToString();
