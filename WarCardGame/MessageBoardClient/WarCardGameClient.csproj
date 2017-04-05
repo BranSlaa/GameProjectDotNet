@@ -55,7 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Service References\MessageBoardServiceRef\Reference.cs">
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -96,19 +96,19 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Service References\MessageBoardServiceRef\item.xsd">
+    <None Include="Service References\ServiceReference1\item.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\MessageBoardServiceRef\item1.xsd">
+    <None Include="Service References\ServiceReference1\item1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\MessageBoardServiceRef\item2.xsd">
+    <None Include="Service References\ServiceReference1\item2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\MessageBoardServiceRef\item3.xsd">
+    <None Include="Service References\ServiceReference1\item3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\MessageBoardServiceRef\MessageBoard.wsdl" />
+    <None Include="Service References\ServiceReference1\MessageBoard.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -119,28 +119,28 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MessageBoardLibrary\MessageBoardLibrary.csproj">
-      <Project>{4d25e43e-dcb8-4023-bc59-ebbc7f77b852}</Project>
-      <Name>MessageBoardLibrary</Name>
-    </ProjectReference>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\MessageBoardServiceRef\" />
+    <None Include="Service References\ServiceReference1\item.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\MessageBoardServiceRef\item.disco" />
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\MessageBoardServiceRef\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\MessageBoardServiceRef\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\MessageBoardServiceRef\Reference.svcmap">
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MessageBoardLibrary\WarCardGameLibrary.csproj">
+      <Project>{4d25e43e-dcb8-4023-bc59-ebbc7f77b852}</Project>
+      <Name>WarCardGameLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

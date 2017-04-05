@@ -22,21 +22,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MessageBoardLibrary;
+using WarCardGameLibrary;
 using System.ServiceModel;
-using MessageBoardClient.MessageBoardServiceRef;
+//using MessageBoardClient.MessageBoardServiceRef;
+using MessageBoardClient.ServiceReference1;
 
-namespace MessageBoardClient
+namespace WarCardGameClient
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     ///
     [CallbackBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant, UseSynchronizationContext = false)]
-    public partial class MainWindow : Window, MessageBoardServiceRef.IUserCallback
+    public partial class MainWindow : Window, MessageBoardClient.ServiceReference1.IUserCallback
     {
         private Deck deck = new Deck();
-        private UserClient msgBrd = null;
+        private UserClient gameBrd = null;
         private string name = "";
 
         public MainWindow()
@@ -46,18 +47,18 @@ namespace MessageBoardClient
 
         private void buttonSubmit_Click(object sender, RoutedEventArgs e)
         {
-            bool canbePlayed = msgBrd.CanBePlayed(name);
+            bool canbePlayed = gameBrd.CanBePlayed(name);
             if (canbePlayed)
             {
                 try
                 {
                     Card card = deck.Draw();
                     string c = card.Name;
-                    msgBrd.PostMessage(name + " has played a " + c);
-                    string winner = msgBrd.addCard(name, card);
+                    gameBrd.PostMessage(name + " has played a " + c);
+                    string winner = gameBrd.addCard(name, card);
                     if(winner != "")
                     {
-                        msgBrd.PostMessage(winner);
+                        gameBrd.PostMessage(winner);
                     }
                     
                     textPost.Clear();
@@ -71,7 +72,7 @@ namespace MessageBoardClient
             }
             else
             {
-                msgBrd.PostMessage("You have already played a card");
+                gameBrd.PostMessage("You have already played a card");
             }
         }
 
@@ -99,7 +100,7 @@ namespace MessageBoardClient
         {
             try
             {
-                listMessages.ItemsSource = msgBrd.GetAllMessages();
+                listMessages.ItemsSource = gameBrd.GetAllMessages();
             }
             catch (Exception ex)
             {
@@ -109,8 +110,8 @@ namespace MessageBoardClient
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (msgBrd != null)
-                msgBrd.Leave(textAlias.Text);
+            if (gameBrd != null)
+                gameBrd.Leave(textAlias.Text);
         }
 
         // Helper methods
@@ -119,18 +120,18 @@ namespace MessageBoardClient
         {
             try
             {
-                msgBrd = new UserClient(new InstanceContext(this));
+                gameBrd = new UserClient(new InstanceContext(this));
                 
-                if (msgBrd.Join(textAlias.Text))
+                if (gameBrd.Join(textAlias.Text))
                 {
                     // Alias accepted by the service so update GUI
-                    listMessages.ItemsSource = msgBrd.GetAllMessages();
+                    listMessages.ItemsSource = gameBrd.GetAllMessages();
                     textAlias.IsEnabled = buttonSet.IsEnabled = false;                
                 }
                 else
                 {
                     // Alias rejected by the service so nullify service proxies
-                    msgBrd = null;
+                    gameBrd = null;
                     MessageBox.Show("ERROR: Alias in use. Please try again.");
                 }
             }

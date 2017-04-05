@@ -14,7 +14,7 @@ using System.Linq;
 using System.Text;
 using System.ServiceModel;
 
-namespace MessageBoardLibrary
+namespace WarCardGameLibrary
 {
     /*------------------------------- Client Callback Contracts ------------------------------*/
 
@@ -46,7 +46,7 @@ namespace MessageBoardLibrary
     /*--------------------------------- Service Implementation -------------------------------*/
 
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
-    public class MessageBoard : IUser
+    public class GameBoard : IUser
     {
         private Dictionary<string, IUserCallback> userCallbacks
             = new Dictionary<string, IUserCallback>();

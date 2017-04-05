@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization; // WCF Data Contract Types
 
-namespace MessageBoardLibrary
+namespace WarCardGameLibrary
 {
     [DataContract]
     public class Card
