@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WarCardGame.ServiceReference1;
+using WarCardGameLibrary;
 
 namespace WarCardGame
 {
@@ -19,6 +21,7 @@ namespace WarCardGame
 	/// </summary>
 	public partial class LogonWindow : Window
 	{
+		private string name = "";
 		public LogonWindow()
 		{
 			InitializeComponent();

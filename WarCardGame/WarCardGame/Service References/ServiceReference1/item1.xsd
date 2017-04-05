@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WarCardGameLibrary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WarCardGameLibrary" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Card">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rank" type="tns:Card.RankID" />
+      <xs:element minOccurs="0" name="Suit" type="tns:Card.SuitID" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Card" nillable="true" type="tns:Card" />
+  <xs:simpleType name="Card.RankID">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ace" />
+      <xs:enumeration value="King" />
+      <xs:enumeration value="Queen" />
+      <xs:enumeration value="Jack" />
+      <xs:enumeration value="Ten" />
+      <xs:enumeration value="Nine" />
+      <xs:enumeration value="Eight" />
+      <xs:enumeration value="Seven" />
+      <xs:enumeration value="Six" />
+      <xs:enumeration value="Five" />
+      <xs:enumeration value="Four" />
+      <xs:enumeration value="Three" />
+      <xs:enumeration value="Two" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Card.RankID" nillable="true" type="tns:Card.RankID" />
+  <xs:simpleType name="Card.SuitID">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Clubs" />
+      <xs:enumeration value="Diamonds" />
+      <xs:enumeration value="Hearts" />
+      <xs:enumeration value="Spades" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Card.SuitID" nillable="true" type="tns:Card.SuitID" />
+</xs:schema>
