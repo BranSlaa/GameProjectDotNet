@@ -133,6 +133,12 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MessageBoardLibrary\WarCardGameLibrary.csproj">
+      <Project>{4d25e43e-dcb8-4023-bc59-ebbc7f77b852}</Project>
+      <Name>WarCardGameLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceReference1\" />
   </ItemGroup>
   <ItemGroup>
@@ -149,12 +155,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MessageBoardLibrary\WarCardGameLibrary.csproj">
-      <Project>{4d25e43e-dcb8-4023-bc59-ebbc7f77b852}</Project>
-      <Name>WarCardGameLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
