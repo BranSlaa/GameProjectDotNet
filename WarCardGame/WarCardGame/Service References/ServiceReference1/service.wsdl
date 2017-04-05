@@ -181,9 +181,9 @@
   </wsdl:binding>
   <wsdl:service name="GameBoard">
     <wsdl:port name="GameBoard" binding="tns:GameBoard">
-      <soap12:address location="net.tcp://localhost:333/WarCardGameLibrary/User" />
+      <soap12:address location="net.tcp://localhost:12000/WarCardGameLibrary/User" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://localhost:333/WarCardGameLibrary/User</wsa10:Address>
+        <wsa10:Address>net.tcp://localhost:12000/WarCardGameLibrary/User</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
           <Upn>BARAD-DÛR\Owner</Upn>
         </Identity>

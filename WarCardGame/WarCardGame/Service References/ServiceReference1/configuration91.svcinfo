@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="9Hlx7hExMm1LUkOO6YUfm7CC3Bo=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="7PounNnsidNgAMLu7i+dA9zoH2g=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="netTcpBinding" name="GameBoard">
       <properties>
@@ -121,10 +121,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="GameBoard1" contract="ServiceReference1.IUser" bindingType="netTcpBinding" address="net.tcp://localhost:333/WarCardGameLibrary/User" bindingConfiguration="GameBoard">
+    <endpoint name="GameBoard1" contract="ServiceReference1.IUser" bindingType="netTcpBinding" address="net.tcp://localhost:12000/WarCardGameLibrary/User" bindingConfiguration="GameBoard">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>net.tcp://localhost:333/WarCardGameLibrary/User</serializedValue>
+          <serializedValue>net.tcp://localhost:12000/WarCardGameLibrary/User</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
