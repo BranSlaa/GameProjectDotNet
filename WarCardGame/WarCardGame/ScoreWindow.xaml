@@ -10,8 +10,8 @@
 		<ListView x:Name="lvScore" Margin="10">
 			<ListView.View>
 				<GridView>
-					<GridViewColumn Header="Player Name" Width="120" DisplayMemberBinding="{Binding Name}" />
-					<GridViewColumn Header="Score" Width="50" DisplayMemberBinding="{Binding Score}" />
+					<GridViewColumn Header="Player Name" Width="120" DisplayMemberBinding="{Binding Key}" />
+					<GridViewColumn Header="Score" Width="50" DisplayMemberBinding="{Binding Value}" />
 				</GridView>
 			</ListView.View>
 		</ListView>
