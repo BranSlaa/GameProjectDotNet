@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Q2BA1W9qEAAwKu4Zsj0Xy0C2nic=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="6O/1SFOzdXfL9QDTj1mcexmIt20=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="wsDualHttpBinding" name="User">
       <properties>
@@ -97,10 +97,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="User" contract="ServiceReference1.IUser" bindingType="wsDualHttpBinding" address="http://localhost:12000/WarCardGameLibrary/User" bindingConfiguration="User">
+    <endpoint name="User" contract="ServiceReference1.IUser" bindingType="wsDualHttpBinding" address="http://192.168.0.23:12000/WarCardGameLibrary/User" bindingConfiguration="User">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:12000/WarCardGameLibrary/User</serializedValue>
+          <serializedValue>http://192.168.0.23:12000/WarCardGameLibrary/User</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
