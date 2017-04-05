@@ -10,29 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WarCardGame
 {
 	/// <summary>
-	/// Interaction logic for MainWindow.xaml
+	/// Interaction logic for ScoreWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
+	public partial class ScoreWindow : Window
 	{
-		public MainWindow()
+		public ScoreWindow()
 		{
 			InitializeComponent();
-		}
-
-		private void btnPlayNextCard_Click(object sender, RoutedEventArgs e)
-		{
-
-		}
-
-		private void btnViewScores_Click(object sender, RoutedEventArgs e)
-		{
-
 		}
 	}
 }
