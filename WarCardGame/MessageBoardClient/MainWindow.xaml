@@ -1,4 +1,4 @@
-﻿<Window x:Class="MessageBoardClient.MainWindow"
+﻿<Window x:Class="WarCardGameClient.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="520" Width="741.8" ResizeMode="CanMinimize" Closing="Window_Closing">

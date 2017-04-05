@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MessageBoardClient.MessageBoardServiceRef {
+namespace MessageBoardClient.ServiceReference1 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MessageBoardServiceRef.IUser", CallbackContract=typeof(MessageBoardClient.MessageBoardServiceRef.IUserCallback))]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IUser", CallbackContract=typeof(MessageBoardClient.ServiceReference1.IUserCallback))]
     public interface IUser {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUser/Join", ReplyAction="http://tempuri.org/IUser/JoinResponse")]
@@ -28,10 +28,10 @@ namespace MessageBoardClient.MessageBoardServiceRef {
         System.Threading.Tasks.Task<bool> CanBePlayedAsync(string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUser/addCard", ReplyAction="http://tempuri.org/IUser/addCardResponse")]
-        string addCard(string name, MessageBoardLibrary.Card card);
+        string addCard(string name, WarCardGameLibrary.Card card);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUser/addCard", ReplyAction="http://tempuri.org/IUser/addCardResponse")]
-        System.Threading.Tasks.Task<string> addCardAsync(string name, MessageBoardLibrary.Card card);
+        System.Threading.Tasks.Task<string> addCardAsync(string name, WarCardGameLibrary.Card card);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IUser/Leave")]
         void Leave(string name);
@@ -60,12 +60,12 @@ namespace MessageBoardClient.MessageBoardServiceRef {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IUserChannel : MessageBoardClient.MessageBoardServiceRef.IUser, System.ServiceModel.IClientChannel {
+    public interface IUserChannel : MessageBoardClient.ServiceReference1.IUser, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class UserClient : System.ServiceModel.DuplexClientBase<MessageBoardClient.MessageBoardServiceRef.IUser>, MessageBoardClient.MessageBoardServiceRef.IUser {
+    public partial class UserClient : System.ServiceModel.DuplexClientBase<MessageBoardClient.ServiceReference1.IUser>, MessageBoardClient.ServiceReference1.IUser {
         
         public UserClient(System.ServiceModel.InstanceContext callbackInstance) : 
                 base(callbackInstance) {
@@ -103,11 +103,11 @@ namespace MessageBoardClient.MessageBoardServiceRef {
             return base.Channel.CanBePlayedAsync(name);
         }
         
-        public string addCard(string name, MessageBoardLibrary.Card card) {
+        public string addCard(string name, WarCardGameLibrary.Card card) {
             return base.Channel.addCard(name, card);
         }
         
-        public System.Threading.Tasks.Task<string> addCardAsync(string name, MessageBoardLibrary.Card card) {
+        public System.Threading.Tasks.Task<string> addCardAsync(string name, WarCardGameLibrary.Card card) {
             return base.Channel.addCardAsync(name, card);
         }
         

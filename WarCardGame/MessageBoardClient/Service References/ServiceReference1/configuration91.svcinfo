@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="c6P5HGrczNSAnmFV1bciYGaquI0=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="nkUSNGiYfnHo/NKU8+gxRxjrZbo=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="wsDualHttpBinding" name="User">
       <properties>
@@ -97,7 +97,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="User" contract="MessageBoardServiceRef.IUser" bindingType="wsDualHttpBinding" address="http://localhost:12000/MessageBoardLibrary/User" bindingConfiguration="User">
+    <endpoint name="User" contract="ServiceReference1.IUser" bindingType="wsDualHttpBinding" address="http://localhost:12000/MessageBoardLibrary/User" bindingConfiguration="User">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:12000/MessageBoardLibrary/User</serializedValue>
@@ -112,7 +112,7 @@
           <serializedValue>User</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>MessageBoardServiceRef.IUser</serializedValue>
+          <serializedValue>ServiceReference1.IUser</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

@@ -15,9 +15,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.ServiceModel;
-using MessageBoardLibrary;
+using WarCardGameLibrary;
 
-namespace MessageBoardService
+namespace WarCardGameService
 {
     public class Program
     {
@@ -27,7 +27,7 @@ namespace MessageBoardService
             try
             {
                 // Create the service host 
-                servHost = new ServiceHost( typeof(MessageBoard) );
+                servHost = new ServiceHost( typeof(GameBoard) );
 
                 // Start the service
                 servHost.Open();

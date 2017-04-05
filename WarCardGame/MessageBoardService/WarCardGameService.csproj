@@ -51,9 +51,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MessageBoardLibrary\MessageBoardLibrary.csproj">
+    <ProjectReference Include="..\MessageBoardLibrary\WarCardGameLibrary.csproj">
       <Project>{4d25e43e-dcb8-4023-bc59-ebbc7f77b852}</Project>
-      <Name>MessageBoardLibrary</Name>
+      <Name>WarCardGameLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

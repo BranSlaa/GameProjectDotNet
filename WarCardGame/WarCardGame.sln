@@ -5,11 +5,11 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarCardGame", "WarCardGame\WarCardGame.csproj", "{C879D323-7FDA-40A8-BAA6-D536B276BB3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBoardClient", "MessageBoardClient\MessageBoardClient.csproj", "{BCEB5662-9EE6-44AD-B19B-9D8DC73A84DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarCardGameClient", "MessageBoardClient\WarCardGameClient.csproj", "{BCEB5662-9EE6-44AD-B19B-9D8DC73A84DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBoardService", "MessageBoardService\MessageBoardService.csproj", "{85B8DB79-E0AC-4227-9CA3-04301857F5A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarCardGameService", "MessageBoardService\WarCardGameService.csproj", "{85B8DB79-E0AC-4227-9CA3-04301857F5A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBoardLibrary", "MessageBoardLibrary\MessageBoardLibrary.csproj", "{4D25E43E-DCB8-4023-BC59-EBBC7F77B852}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarCardGameLibrary", "MessageBoardLibrary\WarCardGameLibrary.csproj", "{4D25E43E-DCB8-4023-BC59-EBBC7F77B852}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
