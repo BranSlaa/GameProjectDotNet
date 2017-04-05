@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a006e5b6-34be-4653-9382-cda48d899c4b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="430053aa-bb05-4571-8811-12d194d01e37" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="net.tcp://localhost:12000/WarCardGameLibrary/User/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="net.tcp://192.168.0.23:12000/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="8494ff41-0ad6-4508-b546-210556aa7a04" SourceId="1" SourceUrl="net.tcp://localhost:12000/WarCardGameLibrary/User/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="316519f0-9e21-41e3-9e12-4ba5888ecc30" SourceId="1" SourceUrl="net.tcp://localhost:12000/WarCardGameLibrary/User/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="c7c017b5-2413-4228-ace4-f16af8df4867" SourceId="1" SourceUrl="net.tcp://localhost:12000/WarCardGameLibrary/User/mex" />
-    <MetadataFile FileName="WarCardGameLibrary.xsd" MetadataType="Schema" ID="ef9b3ffd-bffe-4407-95be-3600a036b380" SourceId="1" SourceUrl="net.tcp://localhost:12000/WarCardGameLibrary/User/mex" />
-    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="a16f24bd-c053-483f-a60e-f5a3050bf685" SourceId="1" SourceUrl="net.tcp://localhost:12000/WarCardGameLibrary/User/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="91851aa2-8704-44a1-8f2e-ed96076d9827" SourceId="1" SourceUrl="net.tcp://192.168.0.23:12000/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="7a832573-3fab-49e9-92fb-6f007ba9807b" SourceId="1" SourceUrl="net.tcp://192.168.0.23:12000/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="2549db0a-0c06-424e-8dff-99dd844b4061" SourceId="1" SourceUrl="net.tcp://192.168.0.23:12000/mex" />
+    <MetadataFile FileName="WarCardGameLibrary.xsd" MetadataType="Schema" ID="51200b7a-2f10-435f-b649-99abe8e29076" SourceId="1" SourceUrl="net.tcp://192.168.0.23:12000/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="14d13dcb-ed1c-4663-9305-a3f441a2def0" SourceId="1" SourceUrl="net.tcp://192.168.0.23:12000/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
