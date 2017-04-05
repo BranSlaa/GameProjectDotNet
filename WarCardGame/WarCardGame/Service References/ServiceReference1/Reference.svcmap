@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e3843848-00d0-4566-8148-430ca034fc49" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="09dac8bd-9ab4-42e8-95aa-817dc8795770" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,12 +22,12 @@
     <MetadataSource Address="http://localhost:12000" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="a559ee16-84e6-48ca-ba8e-a46589b330a7" SourceId="1" SourceUrl="http://localhost:12000/?xsd=xsd3" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="9c96c171-875a-4d0e-b3e7-e509955b217f" SourceId="1" SourceUrl="http://localhost:12000/?xsd=xsd2" />
-    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="2ee1e958-d04a-41e5-bb98-7cf6d88fda62" SourceId="1" SourceUrl="http://localhost:12000/?xsd=xsd0" />
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="83e6e0c3-78be-44d5-a583-c02c1448f857" SourceId="1" SourceUrl="http://localhost:12000/?disco" />
-    <MetadataFile FileName="GameBoard.wsdl" MetadataType="Wsdl" ID="204b9648-53e0-4d07-af33-fe59ab70f33c" SourceId="1" SourceUrl="http://localhost:12000/?wsdl" />
-    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="c2200b78-af05-4a33-bdce-74a916408057" SourceId="1" SourceUrl="http://localhost:12000/?xsd=xsd1" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="60eeb281-2113-4d48-9662-8ae0354183dd" SourceId="1" SourceUrl="http://localhost:12000/?xsd=xsd3" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="8c999420-43a6-482b-8d0f-3d02773bbf38" SourceId="1" SourceUrl="http://localhost:12000/?xsd=xsd2" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="6586cd6c-e120-4fc7-afce-2d4efb870918" SourceId="1" SourceUrl="http://localhost:12000/?xsd=xsd0" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="2710dc91-dc6a-4b27-a101-caa7f944eb08" SourceId="1" SourceUrl="http://localhost:12000/?disco" />
+    <MetadataFile FileName="GameBoard.wsdl" MetadataType="Wsdl" ID="caa43b49-6bda-429f-b3b1-b42c10c52ee7" SourceId="1" SourceUrl="http://localhost:12000/?wsdl" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="fe7fec53-aeac-47d0-9dcb-9d32a1e1cb15" SourceId="1" SourceUrl="http://localhost:12000/?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

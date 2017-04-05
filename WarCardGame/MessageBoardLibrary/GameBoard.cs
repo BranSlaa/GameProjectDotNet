@@ -116,10 +116,10 @@ namespace WarCardGameLibrary
             if(allCards.Count == userCallbacks.Count && allCards.Count > 1)
             {
                 KeyValuePair<string, Card> tempWinner = allCards.ElementAt(0);
-                for(int i = 1; i > allCards.Count; i++)
+                for(int i = 1; i < allCards.Count; i++)
                 {
                     KeyValuePair<string, Card> temp = allCards.ElementAt(i);
-                    if(temp.Value.Rank > tempWinner.Value.Rank)
+                    if(temp.Value.Rank < tempWinner.Value.Rank)
                     {
                         tempWinner = temp;
                     }
