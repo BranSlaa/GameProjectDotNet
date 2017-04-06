@@ -28,10 +28,16 @@ namespace WarCardGame.ServiceReference1 {
         System.Threading.Tasks.Task<bool> CanBePlayedAsync(string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUser/addCard", ReplyAction="http://tempuri.org/IUser/addCardResponse")]
-        string addCard(string name, WarCardGameLibrary.Card card);
+        string addCard(string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUser/addCard", ReplyAction="http://tempuri.org/IUser/addCardResponse")]
-        System.Threading.Tasks.Task<string> addCardAsync(string name, WarCardGameLibrary.Card card);
+        System.Threading.Tasks.Task<string> addCardAsync(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUser/findWinner", ReplyAction="http://tempuri.org/IUser/findWinnerResponse")]
+        string findWinner();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUser/findWinner", ReplyAction="http://tempuri.org/IUser/findWinnerResponse")]
+        System.Threading.Tasks.Task<string> findWinnerAsync();
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IUser/Leave")]
         void Leave(string name);
@@ -109,12 +115,20 @@ namespace WarCardGame.ServiceReference1 {
             return base.Channel.CanBePlayedAsync(name);
         }
         
-        public string addCard(string name, WarCardGameLibrary.Card card) {
-            return base.Channel.addCard(name, card);
+        public string addCard(string name) {
+            return base.Channel.addCard(name);
         }
         
-        public System.Threading.Tasks.Task<string> addCardAsync(string name, WarCardGameLibrary.Card card) {
-            return base.Channel.addCardAsync(name, card);
+        public System.Threading.Tasks.Task<string> addCardAsync(string name) {
+            return base.Channel.addCardAsync(name);
+        }
+        
+        public string findWinner() {
+            return base.Channel.findWinner();
+        }
+        
+        public System.Threading.Tasks.Task<string> findWinnerAsync() {
+            return base.Channel.findWinnerAsync();
         }
         
         public void Leave(string name) {

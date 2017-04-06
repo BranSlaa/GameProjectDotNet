@@ -14,6 +14,8 @@ namespace WarCardGameLibrary
         private List<Card> cards = new List<Card>();
         [DataMember]
         private int cardIdx;
+        [DataMember]
+        private int numDecks;
 
         // Contructor 
 
@@ -21,6 +23,7 @@ namespace WarCardGameLibrary
         {
             // Initialize member variables
             cardIdx = 0;
+            numDecks = 8;
             repopulate();
         }
 
@@ -82,16 +85,18 @@ namespace WarCardGameLibrary
             cards.Clear();
 
             // Populate with new cards
-
-            // For each suit...
-            foreach (Card.SuitID s in Enum.GetValues(typeof(Card.SuitID)))
+            for (int d = 0; d < numDecks; d++)
             {
-                // For each rank with the current suit...
-                foreach (Card.RankID r in Enum.GetValues(typeof(Card.RankID)))
+                // For each suit...
+                foreach (Card.SuitID s in Enum.GetValues(typeof(Card.SuitID)))
                 {
-                    // Add a card with the current suit and rank
-                    cards.Add(new Card(s, r));
+                    // For each rank with the current suit...
+                    foreach (Card.RankID r in Enum.GetValues(typeof(Card.RankID)))
+                    {
+                        // Add a card with the current suit and rank
+                        cards.Add(new Card(s, r));
 
+                    }
                 }
             }
             

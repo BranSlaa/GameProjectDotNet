@@ -37,7 +37,6 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import namespace="http://tempuri.org/" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WarCardGameLibrary" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
@@ -58,6 +57,12 @@
   </wsdl:message>
   <wsdl:message name="IUser_addCard_OutputMessage">
     <wsdl:part name="parameters" element="tns:addCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_findWinner_InputMessage">
+    <wsdl:part name="parameters" element="tns:findWinner" />
+  </wsdl:message>
+  <wsdl:message name="IUser_findWinner_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findWinnerResponse" />
   </wsdl:message>
   <wsdl:message name="IUser_Leave_InputMessage">
     <wsdl:part name="parameters" element="tns:Leave" />
@@ -92,6 +97,10 @@
     <wsdl:operation name="addCard">
       <wsdl:input wsaw:Action="http://tempuri.org/IUser/addCard" message="tns:IUser_addCard_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUser/addCardResponse" message="tns:IUser_addCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findWinner">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/findWinner" message="tns:IUser_findWinner_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/findWinnerResponse" message="tns:IUser_findWinner_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Leave">
       <wsdl:input wsaw:Action="http://tempuri.org/IUser/Leave" message="tns:IUser_Leave_InputMessage" />
@@ -142,6 +151,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="findWinner">
+      <soap12:operation soapAction="http://tempuri.org/IUser/findWinner" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Leave">
       <soap12:operation soapAction="http://tempuri.org/IUser/Leave" style="document" />
       <wsdl:input>
@@ -181,9 +199,9 @@
   </wsdl:binding>
   <wsdl:service name="GameBoard">
     <wsdl:port name="GameBoard" binding="tns:GameBoard">
-      <soap12:address location="net.tcp://172.22.130.121:12000/WarCardGameLibrary/User" />
+      <soap12:address location="net.tcp://192.168.1.104:12000/WarCardGameLibrary/User" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://172.22.130.121:12000/WarCardGameLibrary/User</wsa10:Address>
+        <wsa10:Address>net.tcp://192.168.1.104:12000/WarCardGameLibrary/User</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
           <Upn>MATT-PC\matthew</Upn>
         </Identity>

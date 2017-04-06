@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WarCardGameLibrary;
 using WarCardGame.ServiceReference1;
 
 
@@ -25,7 +24,6 @@ namespace WarCardGame
 	[CallbackBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant, UseSynchronizationContext = false)]
 	public partial class MainWindow : Window, WarCardGame.ServiceReference1.IUserCallback
 	{
-		private Deck deck = new Deck();
 		private UserClient gameBrd = null;
 		private string name = "";
 		public MainWindow()
@@ -40,10 +38,9 @@ namespace WarCardGame
 			{
 				try
 				{
-					Card card = deck.Draw();
-					string c = card.Name;
-					gameBrd.PostMessage(name + " has played a " + c);
-					string winner = gameBrd.addCard(name, card);
+                    string card = gameBrd.addCard(name);
+					gameBrd.PostMessage(name + " has played a " + card);
+					string winner = gameBrd.findWinner();
 					if (winner != "")
 						gameBrd.PostMessage(winner);
 					

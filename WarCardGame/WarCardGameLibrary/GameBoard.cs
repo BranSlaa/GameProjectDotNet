@@ -34,7 +34,9 @@ namespace WarCardGameLibrary
         [OperationContract]
         bool CanBePlayed(string name);
         [OperationContract]
-        string addCard(string name, Card card);
+        string addCard(string name);
+        [OperationContract]
+        string findWinner();
         [OperationContract(IsOneWay = true)]
         void Leave(string name);
         [OperationContract(IsOneWay = true)]
@@ -50,6 +52,7 @@ namespace WarCardGameLibrary
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public class GameBoard : IUser
     {
+        private Deck deck = new Deck();
         private Dictionary<string, IUserCallback> userCallbacks
             = new Dictionary<string, IUserCallback>();
         private Dictionary<string, Card> allCards = new Dictionary<string, Card>();
@@ -108,9 +111,14 @@ namespace WarCardGameLibrary
                 cb.SendAllMessages(msgs);
         }
 
-        public string addCard(string name, Card card)
+        public string addCard(string name)
         {
+            Card card = deck.Draw();
             allCards.Add(name, card);
+            return card.Name;
+        }
+        public string findWinner()
+        {  
             string whoWon = "";
             string amountOfPoints = "";
             if(allCards.Count == userCallbacks.Count && allCards.Count > 1)
@@ -139,12 +147,33 @@ namespace WarCardGameLibrary
                     {
                         playerPoints[kvp.Key] = kvp.Value + 1;
                         amountOfPoints = playerPoints[kvp.Key].ToString();
+
                         break;
                     }
-                } 
-                whoWon = tempWinner.Key + " has won with a " + tempWinner.Value.Name + ". They now have " + 
-                    amountOfPoints + " point(s)";
-                allCards.Clear();
+                }
+
+                bool endGame = false;
+                //check to see if someone has 10 points.  if they do, then end the game
+                foreach(KeyValuePair<string, int> kvp in playerPoints)
+                {
+                    if(kvp.Value >= 10)
+                    {
+                        endGame = true;
+                        break;
+                    }
+                }
+                if(endGame)
+                {
+                    whoWon = tempWinner.Key + " has 10 points.  They have won the game!\n" +  tempWinner.Key + 
+                        " has won with a " + tempWinner.Value.Name + ". They now have " + amountOfPoints + " point(s)";
+                }
+                else
+                {
+                    whoWon = tempWinner.Key + " has won with a " + tempWinner.Value.Name + ". They now have " +
+                   amountOfPoints + " point(s)";
+                    allCards.Clear();
+                }
+               
             }
             return whoWon;
         }
