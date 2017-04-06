@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WarCardGame.ServiceReference1;
-using WarCardGameLibrary;
+//using WarCardGameLibrary;
 
 namespace WarCardGame
 {
